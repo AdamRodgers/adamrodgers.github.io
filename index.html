@@ -13,6 +13,7 @@
 				background-size: 100% 100%;
 				background-color: #0e0301;
 				color: white;
+				font-family: 'Oswald', sans-serif;
 			}
 			#wrapper {
 				background: url('./images/bg.png') no-repeat;
@@ -30,7 +31,6 @@
 				font-size: 72px;
 				font-weight: bolder;
 				line-height: 68px;
-				font-family: 'Oswald', sans-serif;
 				position: absolute;
 				top: 10px;
 				left: -100px;
@@ -44,6 +44,22 @@
 			#wrapper #content #title .line2 {
 				color: #91693D;
 			}
+			#wrapper #content #schedule {
+				position: absolute;
+				top: 500px;
+				left: -20px;
+			}
+			#wrapper #content #schedule table {
+				border-collapse: collapse;
+				margin-bottom: 25px;
+			}
+			#wrapper #content #schedule table td {
+				border: 1pt solid #83572e;
+				min-width: 80px;
+			}
+			#wrapper #content #schedule table td.no-border {
+				border: none;
+			}
 		</style>
 	</head>
 	<body>
@@ -53,6 +69,30 @@
 					<span class="super">The Official Website</span><br />
 					<span class="line1">Adam</span><br />
 					<span class="line2">Rodgers</span>
+				</div>
+				<div id="schedule">
+					<table>
+						<tr>
+							<td class="no-border"></td>
+							<td>Monday</td>
+							<td>Tuesday</td>
+							<td>Wednesday</td>
+							<td>Thursday</td>
+							<td>Friday</td>
+							<td>Saturday</td>
+							<td>Sunday</td>
+						</tr>
+						<tr>
+							<td>Maggie Mae's</td>
+							<td></td>
+							<td>8pm-12am</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</table>
 				</div>
 			</div>
 		</div>
