@@ -1,6 +1,7 @@
 <html>
 	<head>
 		<title>Adam Rodgers</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<style>
 			@import url(https://fonts.googleapis.com/css?family=Oswald:300);
 		
@@ -23,6 +24,7 @@
 				min-height: 720px;
     			margin-bottom: 10px;
 				margin: 0 auto;
+
 			}
 			#wrapper #content {
 				position: relative;
@@ -75,15 +77,79 @@
 			#wrapper #content #schedule table td.no-border {
 				border: none;
 			}
+
+
+			@media only screen and (max-width: 600px) {
+				#wrapper {
+					background-size: 110% auto;
+					background-position: 0px 50px;
+					max-width: auto;
+					width: auto;
+				}
+				#wrapper #content #title {
+					font-size: 50px;
+					font-weight: bolder;
+					line-height: 48px;
+					position: absolute;
+					top: 450px;
+					left: 40px;
+					text-align: right;
+				}
+				#wrapper #content #title .line1,
+				#wrapper #content #title .line2 {
+					display: inline-block;
+				}
+				#wrapper #content #title .super {
+					display: auto;
+					font-size: 18px;
+					font-weight: normal;
+					line-height: 32px;
+					position: relative;
+					bottom: -75px;
+					left: -152px;
+				}
+				#wrapper #content #title .line2 {
+					color: #91693D;
+				}
+				#wrapper #content #social {
+					position: absolute;
+					top: 5px;
+					right: 5px;
+					text-align: right;
+				}
+				#wrapper #content #schedule {
+					position: absolute;
+					top: 600px;
+					left: 5px;
+				}
+				#wrapper #content #schedule table {
+					border-collapse: collapse;
+					margin-bottom: 25px;
+				}
+				#wrapper #content #schedule table td {
+					max-width: 50px;
+					border: 1pt solid #83572e;
+					min-width: auto;
+				}
+				#wrapper #content #schedule table td.day {
+					max-width: 50px;
+				    overflow:hidden;
+				    text-overflow:ellipsis;
+				    white-space: nowrap;   
+				}
+				#wrapper #content #schedule table td.no-border {
+					border: none;
+				}
+			}
 		</style>
 	</head>
 	<body>
 		<div id="wrapper">
 			<div id="content">
 				<div id="title">
-					<span class="super">The Official Website</span><br />
-					<span class="line1">Adam</span><br />
-					<span class="line2">Rodgers</span>
+					<div class="super">The Official Website</div>
+					<div class="line1">Adam</div>
+					<div class="line2">Rodgers</div>
 				</div>
 				<div id="social">
 					<div class="service"><a href="http://www.facebook.com/iknowadamrodgers"><img src="./images/grunge-facebook.png" /></a></div>
@@ -93,13 +159,13 @@
 					<table>
 						<tr>
 							<td class="no-border"></td>
-							<td>Monday</td>
-							<td>Tuesday</td>
-							<td>Wednesday</td>
-							<td>Thursday</td>
-							<td>Friday</td>
-							<td>Saturday</td>
-							<td>Sunday</td>
+							<td class="day">Monday</td>
+							<td class="day">Tuesday</td>
+							<td class="day">Wednesday</td>
+							<td class="day">Thursday</td>
+							<td class="day">Friday</td>
+							<td class="day">Saturday</td>
+							<td class="day">Sunday</td>
 						</tr>
 						<tr>
 							<td>The Gatsby
