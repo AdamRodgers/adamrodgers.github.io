@@ -5,17 +5,16 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
 </head>
 <body>
-	<p>First name: <strong data-bind="text: firstName"></strong></p>
-	<p>Last name: <strong data-bind="text: lastName"></strong></p>
-</body>
+	<div data-bind="text: nextEventName" class="next-event-name"></div>
+	<div data-bind="text: nextEventTime" class="next-event-time"></div>
 <script type="text/javascript">
 	// This is a simple *viewmodel* - JavaScript that defines the data and behavior of your UI
-function AppViewModel() {
-    this.firstName = "Bert";
-    this.lastName = "Bertington";
-}
+	function AppViewModel() {
+		this.nextEventName = "Maggie Mae's";
+		this.nextEventTime = "Friday" + "8pm - 12pm"
+	}
 
-// Activates knockout.js
-ko.applyBindings(new AppViewModel());
+	// Activates knockout.js
+	ko.applyBindings(new AppViewModel());
 </script>
 </html>
