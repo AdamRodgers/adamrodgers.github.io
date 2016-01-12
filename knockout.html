@@ -3,15 +3,147 @@
 <head>
 	<title></title>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+	<script type="text/javascript" src="./scripts/require.js"></script>
+	<style>
+		@import url(https://fonts.googleapis.com/css?family=Oswald:300);
+	
+		* {
+			margin: 0px;
+			padding: 0px;
+		}
+		body {
+			background: url('./images/grundge.png');
+			background-size: 100% 100%;
+			background-color: #0e0301;
+			background-attachment: fixed;
+			color: white;
+			font-family: 'Oswald', sans-serif;
+		}
+		#wrapper {
+			background: url('./images/bg.png') no-repeat;
+			max-width: 600px;
+			width: 600px;
+			min-height: 720px;
+			margin-bottom: 10px;
+			margin: 0 auto;
+
+		}
+		#wrapper #content {
+			position: relative;
+		}
+		#wrapper #content #title {
+			font-size: 72px;
+			font-weight: bolder;
+			line-height: 68px;
+			position: absolute;
+			top: 10px;
+			left: -100px;
+			text-align: right;
+		}
+		#wrapper #content #title .super {
+			font-size: 18px;
+			font-weight: normal;
+			line-height: 32px;
+		}
+		#wrapper #content #title .line2 {
+			color: #91693D;
+		}
+		#wrapper #content #social {
+			position: absolute;
+			top: 200px;
+			left: 0px;
+			text-align: right;
+		}
+		#wrapper #content #social .service {
+			display: inline-block;
+			line-height: 35px;
+			padding-left: 10px;
+		}
+		#wrapper #content #social .service img {
+			width: 40px;
+			height: 40px;
+		}
+		#wrapper #content #schedule {
+			position: absolute;
+			top: 600px;
+			left: -20px;
+		}
+
+
+		@media only screen and (max-width: 600px) {
+			#wrapper {
+				background-size: 110% auto;
+				background-position: 0px 50px;
+				max-width: auto;
+				width: auto;
+			}
+			#wrapper #content #title {
+				font-size: 50px;
+				font-weight: bolder;
+				line-height: 48px;
+				position: absolute;
+				top: 450px;
+				left: 40px;
+				text-align: right;
+			}
+			#wrapper #content #title .line1,
+			#wrapper #content #title .line2 {
+				display: inline-block;
+			}
+			#wrapper #content #title .super {
+				display: auto;
+				font-size: 18px;
+				font-weight: normal;
+				line-height: 32px;
+				position: relative;
+				bottom: -75px;
+				left: -152px;
+			}
+			#wrapper #content #title .line2 {
+				color: #91693D;
+			}
+			#wrapper #content #social {
+				position: absolute;
+				top: 5px;
+				right: 5px;
+				text-align: right;
+			}
+			#wrapper #content #schedule {
+				position: absolute;
+				top: 600px;
+				left: 5px;
+			}
+		}
+	</style>
 </head>
 <body>
-	<div data-bind="text: nextEventName" class="next-event-name"></div>
-	<div data-bind="text: nextEventTime" class="next-event-time"></div>
+	<div id="wrapper">
+		<div id="content">
+			<div id="title">
+				<div class="super">The Official Website</div>
+				<div class="line1">Adam</div>
+				<div class="line2">Rodgers</div>
+			</div>
+			<div id="social">
+				<div class="service"><a href="http://www.facebook.com/iknowadamrodgers"><img src="./images/grunge-facebook.png" /></a></div>
+				<div class="service"><a href="http://www.twitter.com/theadamrodgers"><img src="./images/grunge-twitter.png" /></a></div>
+			</div>
+			<div id="schedule">
+				<div>Next Show:</div>
+				<div data-bind="text: nextEventName" class="next-event-name"></div>
+				<div data-bind="text: nextEventTime" class="next-event-time"></div>
+			</div>
+		</div>
+	</div>
 <script type="text/javascript">
+
+	var info = require('info.json');
+	console.log(info);
+
 	// This is a simple *viewmodel* - JavaScript that defines the data and behavior of your UI
 	function AppViewModel() {
 		this.nextEventName = "Maggie Mae's";
-		this.nextEventTime = "Friday" + "8pm - 12pm"
+		this.nextEventTime = "Friday" + " " + "8pm - 12pm"
 	}
 
 	// Activates knockout.js
